@@ -10,3 +10,5 @@ When this project is finished you should be able to:
 - Post a blog
 - Delete a blog
 - Edit your blog
+
+However I want to use this site in order to introduce myself after I've wrapped it up.
