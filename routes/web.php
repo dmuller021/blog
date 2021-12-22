@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +20,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('blogs', function() {
-   return view('blogs');
-});
+Route::resource('/blogs', BlogController::class);
 
 Route::get('login', function() {
     return view('login');
@@ -28,3 +29,9 @@ Route::get('login', function() {
 Route::get('contact', function() {
     return view('contact');
 });
+
+Route::resource('test', BlogController::class);
+
+//Posts endpoint
+Route::get('/posts', [PostsController::class, 'index']);
+

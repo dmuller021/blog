@@ -1,3 +1,7 @@
+@php
+use App\Http\Controllers\BlogController
+@endphp
+
 <!DOCTYPE html>
 <html lang-="en">
 <head>
