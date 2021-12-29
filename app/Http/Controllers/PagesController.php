@@ -15,10 +15,14 @@ class PagesController extends Controller
     }
 
     public function login() {
-        return view('login');
+        return view('auth.login');
     }
 
     public function contact() {
         return view('contact');
+    }
+
+    public function registration() {
+        return view('auth.registration');
     }
 }

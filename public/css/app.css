@@ -35,6 +35,13 @@ span {
     transition: transform 0.1s linear;
 }
 
+.error {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 16px;
+    color: Red;
+}
+
+
 .active_span{
     display: inline-block;
     font-family: 'Syncopate', sans-serif;
