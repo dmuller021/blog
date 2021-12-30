@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,14 @@ Route::get('/', function () {
 
 Route::resource('/blogs', BlogController::class);
 
-Route::get('login', function() {
-    return view('login');
-});
+Route::get('login', [LoginController::class, 'login']);
+
+Route::get('registration', [LoginController::class, 'registration']);
+//Route::post('save', function() {
+//    return view('auth.save');
+//});
+
+Route::post('create', [LoginController::class, 'create'])->name('auth.create');
 
 Route::get('contact', function() {
     return view('contact');
